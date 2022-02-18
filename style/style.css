@@ -1,4 +1,50 @@
+html,
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100%;
+  font-family: sans-serif;
+}
+
+.overflow-wrap {
+  overflow-wrap: anywhere;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home {
+  background-color: #102027;
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: #efefef;
+  font-size: 2.5em;
+}
+
+.text .highlight {
+  color: gold;
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.button {
+  border: 1px solid #efefef;
+  color: #efefef;
+  padding: 15px 20px;
+  margin: 20px;
+}
+
+.button .page-link {
+  font-weight: bold;
 }
