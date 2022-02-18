@@ -3,6 +3,7 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 .overflow-wrap {
@@ -27,9 +28,54 @@ body {
   align-items: center;
 }
 
+.aurora-wrapper {
+  width: 100vw;
+  height: 60vh;
+  background-color: #102027;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  filter: blur(120px);
+  opacity: 80%;
+}
+
+/*  Change the size of each aurora divs, and add some more divs to be more realistic
+    try to add twinkling stars as well */
+.aurora1 {
+  width: 400px;
+  height: 100%;
+  border-bottom: 200px solid #008890;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  animation: fly 12s linear infinite;
+  transform: rotate(0) translate(80px) rotate(0);
+}
+
+.aurora2 {
+  width: 400px;
+  height: 100%;
+  border-bottom: 200px solid #006400;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.aurora3 {
+  width: 400px;
+  height: 100%;
+  border-bottom: 200px solid #104200;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  animation: flyPlus 8s linear infinite;
+  transform: rotate(0) translate(100px) rotate(0);
+}
+
 .text {
   color: #efefef;
   font-size: 2.5em;
+  z-index: 999;
 }
 
 .text .highlight {
@@ -43,8 +89,21 @@ body {
   color: #efefef;
   padding: 15px 20px;
   margin: 20px;
+  z-index: 999;
 }
 
 .button .page-link {
   font-weight: bold;
+}
+
+@keyframes fly {
+  100% {
+    transform: rotate(1turn) translate(100px) rotate(-1turn);
+  }
+}
+
+@keyframes flyPlus {
+  100% {
+    transform: rotate(-1turn) translate(100px) rotate(1turn);
+  }
 }
