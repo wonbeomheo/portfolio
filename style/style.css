@@ -6,9 +6,16 @@ body {
   text-decoration: none;
 }
 
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .overflow-wrap {
   overflow-wrap: anywhere;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +25,15 @@ body {
 #home {
   background-color: #102027;
   height: 100vh;
+  width: 100vw;
+}
+
+#about,
+#blog,
+#contact {
+  padding-top: 50px;
+  color: black;
+  height: 1200px;
   width: 100vw;
 }
 
@@ -45,29 +61,32 @@ body {
 /*  Change the size of each aurora divs, and add some more divs to be more realistic
     try to add twinkling stars as well */
 .aurora1 {
-  width: 400px;
-  height: 100%;
-  border-bottom: 200px solid #008890;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  left: -50px;
+  top: -100px;
+  z-index: 3;
   animation: fly 12s linear infinite;
   transform: rotate(0) translate(80px) rotate(0);
 }
 
 .aurora2 {
-  width: 400px;
-  height: 100%;
-  border-bottom: 200px solid #006400;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  width: 100px;
+  height: 200px;
+  background-color: darkgreen;
+  bottom: -30px;
+  left: -80px;
 }
 
 .aurora3 {
-  width: 400px;
-  height: 100%;
-  border-bottom: 200px solid #104200;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  bottom: -80px;
+  right: -50px;
+  background-color: lightgreen;
   animation: flyPlus 8s linear infinite;
   transform: rotate(0) translate(100px) rotate(0);
 }
@@ -92,8 +111,18 @@ body {
   z-index: 999;
 }
 
-.button .page-link {
-  font-weight: bold;
+.button.page-link:hover {
+  background-color: lightgreen;
+  color: #102027;
+}
+
+.downarrow {
+  transition-duration: 0.5s;
+  transform: rotate(90deg);
+}
+
+.fa-angle-right {
+  transition-duration: 0.5s;
 }
 
 @keyframes fly {
@@ -106,4 +135,31 @@ body {
   100% {
     transform: rotate(-1turn) translate(100px) rotate(1turn);
   }
+}
+
+nav.flex {
+  margin: 0;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #100027;
+  flex-direction: row;
+  z-index: 999;
+}
+
+nav.flex.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.menu {
+  color: white;
+  padding: 15px 50px;
+}
+
+.menu.active {
+  color: lightgreen;
 }
