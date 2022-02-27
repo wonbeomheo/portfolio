@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style/style.css">
   <script src="https://kit.fontawesome.com/1f03aac130.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body draggable="false">
   <div class="overflow-wrap">
     <!-- Home -->
     <section id="home" class="flex height-fix">
@@ -26,28 +26,68 @@
         </div>
       </div>
       <nav class="flex">
-        <div class="menu">Home</div>
-        <div class="menu">About</div>
-        <div class="menu">Blog</div>
-        <div class="menu">Contact</div>
+        <div class="menu" id="#home">Home</div>
+        <div class="menu" id="#about">About</div>
+        <div class="menu" id="#blog">Blog</div>
+        <div class="menu" id="#contact">Contact</div>
       </nav>
     </section>
     <!-- About -->
     <section id="about">
-      <div class="container">
-        About
+      <div class="title">
+        ABOUT
+      </div>
+      <div class="wrapper">
+        <div class="info">
+          <div class="container">
+            <div class="photo">
+              <img src="./img/photo.jpg">
+            </div>
+            <div class="label bold">
+              Who Am I?
+            </div>
+            <div class="article">
+              I am a <span class="bold">Frontend Developer</span>. <br>I have serious passion for developing user interface, and creating intuitive and dynamic user experiences.
+            </div>
+          </div>
+          <div class="skills">
+            <div class="table-title">
+              CONFIDENCE LEVEL
+            </div>
+            <div class="skill1">
+              <div class="skill-name">HTML</div>
+              <div class="skill-level"><span class="bar"></span></div>
+              <span class="skill-percentage">60%</span>
+            </div>
+            <div class="skill2">
+              <div class="skill-name">CSS</div>
+              <div class="skill-level"><span class="bar"></span></div>
+              <span class="skill-percentage">60%</span>
+            </div>
+            <div class="skill3">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-level"><span class="bar"></span></div>
+              <span class="skill-percentage">50%</span>
+            </div>
+            <div class="skill4">
+              <div class="skill-name">Node.js</div>
+              <div class="skill-level"><span class="bar"></span></div>
+              <span class="skill-percentage">50%</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Blog -->
     <section id="blog">
-      <div class="container">
-        Blog
+      <div class="title">
+        BLOG
       </div>
     </section>
     <!-- Contact -->
     <section id="contact">
-      <div class="container">
-        Contact
+      <div class="title">
+        CONTACT
       </div>
     </section>
   </div>

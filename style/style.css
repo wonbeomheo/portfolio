@@ -9,7 +9,7 @@ body {
 section {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -35,6 +35,12 @@ section {
   color: black;
   height: 1200px;
   width: 100vw;
+}
+.title {
+  font-size: 2em;
+  padding-top: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 5px solid black;
 }
 
 .flex {
@@ -162,4 +168,102 @@ nav.flex.fixed {
 
 .menu.active {
   color: lightgreen;
+}
+
+/* About page */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  margin: 5px;
+  width: 100%;
+  padding: 3ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.container {
+  flex-direction: column;
+  text-align: center;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 10em;
+  border-radius: 30%;
+}
+.label {
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.article {
+  min-width: 35ch;
+  max-width: 65ch;
+  width: 100%;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+.table-title {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-bottom: 1ch;
+}
+
+.skills {
+  margin: 5em;
+  width: 100%;
+  min-width: 35ch;
+  height: auto;
+  display: inherit;
+  flex-direction: column;
+}
+
+.skills div {
+  display: inherit;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.skills div div.skill-name {
+  min-width: 10ch;
+  justify-content: center;
+}
+
+.skills div div.skill-level {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  box-shadow: 5px 5px 10px lightgrey;
+  border-radius: 10px;
+}
+
+.skills div:nth-child(n) div.skill-level span.bar {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 80%;
+}
+
+.skills div:nth-child(2n + 1) div.skill-level span.bar {
+  background-color: #aed581;
+}
+
+.skills div:nth-child(2n) div.skill-level span.bar {
+  background-color: #e1ffb1;
+}
+
+.skills div span.skill-percentage {
+  padding: 5px 0 0 10px;
+  width: 5ch;
 }
